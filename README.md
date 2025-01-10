@@ -1,5 +1,5 @@
 # UnsafeEnviroments
-bypass largepaks, ida
+bypass launch errors (large paks, ida)
 
 - Inject like at the end of loading screen
 
