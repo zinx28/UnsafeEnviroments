@@ -28,7 +28,10 @@ DWORD WINAPI Main(LPVOID)
 	// Cannot find a compatible Vulkan device or driver. Try updating your video driver to a more recent version and make sure your video card supports Vulkan.\n\n
 	// 0xE8, 0x00, 0x00, 0x00, 0x00, 0xB2
 	// chapter 3 isnt finding it !! gr
-	auto AttemptFind2 = Memcury::Scanner::FindStringRef(L"Cannot find a compatible Vulkan device or driver. Try updating your video driver to a more recent version and make sure your video card supports Vulkan.\n\n").ScanFor({ 0xE8 }, true, 1).RelativeOffset(1).Get();
+	auto AttemptFind2 = Memcury::Scanner::FindStringRef(L"Cannot find a compatible Vulkan device or driver. Try updating your video driver to a more recent version and make sure your video card supports Vulkan.\n\n", false, false).ScanFor({ 0xE8 }, true, 1).RelativeOffset(1).Get();
+	if (AttemptFind2 == 0) {
+		AttemptFind2 = Memcury::Scanner::FindStringRef(L"FPlatformMisc::RequestExit(%i)").ScanFor({ 0x40, 0x53, 0x48, 0x83, 0xEC, 0x30, 0x80, 0x3D }, false).Get();
+	}
 	std::cout << "RequestExit: " << std::hex << AttemptFind2 << std::endl;
 	std::cout << "RequestExitNEW: " << std::hex << AttemptFind2 - __int64(GetModuleHandleW(0)) << std::endl;
 	
