@@ -1,5 +1,13 @@
 #include "framework.h"
-#include "main.h"
+#include "./public/main.h"
+
+/*
+    TODO:
+        switch between minhook and veh hooking
+        find the best way to patch enviroments, haven't had time yet
+*/
+
+DWORD WINAPI Main(LPVOID) { Main::Init(); return 0; }
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,

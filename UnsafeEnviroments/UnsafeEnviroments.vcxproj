@@ -89,10 +89,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="public\Main.h" />
+    <ClInclude Include="public\Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="private\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\lib\minhook\minhook.lib" />
