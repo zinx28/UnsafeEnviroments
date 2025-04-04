@@ -1,7 +1,7 @@
 #pragma once
 
 /*
-	UnsafeEnviroments
+	UnsafeEnvironment
 */
 
 class Main {
@@ -10,8 +10,8 @@ private:
 public:
 
 	/*
-		Patches UnsafeEnviroments
+		Patches UnsafeEnvironment
 	*/
-	static void PatchUnsafeEnviroments();
+	static void PatchUnsafeEnvironment();
 	static void Init(); 
 };

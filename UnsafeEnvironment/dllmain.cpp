@@ -4,7 +4,7 @@
 /*
     TODO:
         switch between minhook and veh hooking
-        find the best way to patch enviroments, haven't had time yet
+        find the best way to patch environments, haven't had time yet
 */
 
 DWORD WINAPI Main(LPVOID) { Main::Init(); return 0; }

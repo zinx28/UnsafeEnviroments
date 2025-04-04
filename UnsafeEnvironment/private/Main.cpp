@@ -1,7 +1,7 @@
 #include "../public/Main.h"
 #include "../public/Utils.h"
 
-void Main::PatchUnsafeEnviroments()
+void Main::PatchUnsafeEnvironment()
 {
 	Memcury::VEHHook::Init();
 
@@ -40,5 +40,5 @@ void Main::PatchUnsafeEnviroments()
 void Main::Init()
 {
 	Utils::InitConsole();
-	PatchUnsafeEnviroments();
+	PatchUnsafeEnvironment();
 }
